@@ -29,6 +29,10 @@ body {
     grid-gap: 0;
 }
 
+#operators {
+    display: contents; /* Ensures the operator buttons are treated as grid items */
+}
+
 button {
     width: 78px;
     height: 80px;
@@ -47,6 +51,6 @@ button {
 
 .equal {
     background-color: #FA8664;
-    grid-row: span 4;
-    border-radius: 10px;
+    grid-row: span 4; /* Spans the equal button across 4 rows */
+    border-radius: 10px; /* Adds corner radius */
 }
