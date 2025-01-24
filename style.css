@@ -3,48 +3,49 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    margin: 0;
     background-color: #f0f0f0;
-    font-family: Arial, sans-serif;
 }
 
 #calculator {
     width: 320px;
-    border: 1px solid #A9A9A9;
-    border-radius: 10px;
-    overflow: hidden; /* Ensures corners are rounded */
 }
 
 #display {
     background-color: black;
     border-radius: 10px 10px 0 0;
-    width: 100%;
+    width: 320px;
     height: 80px;
     display: flex;
-    justify-content: flex-end;
     align-items: center;
     padding-right: 10px;
-    color: white;
-    font-size: 30px;
+    box-sizing: border-box;
 }
 
 #displayValue {
     color: white;
+    font-size: 30px;
+    text-align: right;
+    flex-grow: 1;
 }
 
 #pad {
-    display: grid;
-    grid-template-columns: repeat(4, 78px);
-    gap: 0;
+    display: flex;
+    flex-wrap: wrap;
 }
 
-.operator, .number {
+.operators, .numbers {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+button {
     width: 78px;
     height: 80px;
-    border: 1px solid #A9A9A9;
     font-size: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    border: 1px solid #A9A9A9;
+    margin: 0;
 }
 
 .operator {
@@ -57,8 +58,6 @@ body {
 
 .equal {
     background-color: #FA8664;
-    height: 320px; /* Spans across 4 rows (80px * 4) */
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    height: 320px; /* Spanning across 4 rows */
+    border-radius: 10px;
 }
