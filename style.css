@@ -11,6 +11,7 @@ body {
     width: 320px;
     border: 1px solid #A9A9A9;
     border-radius: 10px;
+    overflow: hidden; /* Ensures corners are rounded */
 }
 
 #display {
@@ -56,8 +57,7 @@ body {
 
 .equal {
     background-color: #FA8664;
-    height: 320px; /* Span across 4 rows (80px * 4) */
-    border-radius: 0 10px 10px 0; /* Rounded corners for the equal button */
+    height: 320px; /* Spans across 4 rows (80px * 4) */
     display: flex;
     justify-content: center;
     align-items: center;
